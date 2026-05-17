@@ -24,7 +24,7 @@ const el = s => document.querySelector(s)
 const els = s => Array.from(document.querySelectorAll(s))
 /** Formats numeric amounts using the locale configured in mealbuilder/menu.json. */
 const fmt = (n) => {
-  const locale = MENU?.meta?.locale || 'en-GB'
+  const locale = MENU?.meta?.locale || 'en-CA'
   return Intl.NumberFormat(locale).format(Math.round(n))
 }
 const show = id => { const x = el(id); x.classList.remove('hidden'); x.style.opacity = '1' }
