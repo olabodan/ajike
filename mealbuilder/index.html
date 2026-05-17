@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajike Kitchen • Build Your Meal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <div class="brand">
+        <span class="logo">🍽️</span>
+        <div class="brand-text">
+          <h1>Ajike Kitchen</h1>
+          <p class="tagline">Build Your Meal</p>
+        </div>
+      </div>
+      <nav class="progress" aria-label="Progress">
+        <div class="progress-step" data-step="1">1 • Choose Meal</div>
+        <div class="progress-step" data-step="2">2 • Choose Size</div>
+        <div class="progress-step" data-step="3">3 • Choose Protein</div>
+        <div class="progress-step" data-step="4">4 • Add Sides</div>
+        <div class="progress-step" data-step="5">5 • Review Order</div>
+      </nav>
+    </header>
+
+    <main class="builder">
+      <section id="step-1" class="step">
+        <div class="step-header">
+          <h2>Step 1 • Choose Meal</h2>
+        </div>
+        <div id="items-grid" class="grid"></div>
+      </section>
+
+      <section id="step-2" class="step hidden">
+        <div class="step-header">
+          <h2>Step 2 • Choose Size</h2>
+        </div>
+        <div id="sizes-list" class="options"></div>
+        <div class="controls">
+          <button class="btn secondary" id="back-to-1">Back</button>
+          <button class="btn primary" id="to-3" disabled>Next</button>
+        </div>
+      </section>
+
+      <section id="step-3" class="step hidden">
+        <div class="step-header">
+          <h2>Step 3 • Choose Protein</h2>
+        </div>
+        <div id="protein-list" class="options"></div>
+        <div class="controls">
+          <button class="btn secondary" id="back-to-2">Back</button>
+          <button class="btn primary" id="to-4" disabled>Next</button>
+        </div>
+      </section>
+
+      <section id="step-4" class="step hidden">
+        <div class="step-header">
+          <h2>Step 4 • Add Sides (Optional)</h2>
+        </div>
+        <div id="sides-list" class="options"></div>
+        <div class="controls">
+          <button class="btn secondary" id="back-to-3">Back</button>
+          <button class="btn primary" id="to-5">Next</button>
+        </div>
+      </section>
+
+      <section id="step-5" class="step hidden">
+        <div class="step-header">
+          <h2>Step 5 • Review Order</h2>
+        </div>
+        <div id="review" class="review"></div>
+        <div class="qty-controls">
+          <button class="btn qty" data-inc="-1">-1</button>
+          <button class="btn qty" data-inc="-5">-5</button>
+          <button class="btn qty" data-inc="-10">-10</button>
+          <button class="btn qty" data-inc="1">+1</button>
+          <button class="btn qty" data-inc="+5">+5</button>
+          <button class="btn qty" data-inc="10">+10</button>
+        </div>
+        <div class="controls">
+          <button class="btn secondary" id="back-to-4">Back</button>
+          <button class="btn success" id="add-to-cart">Add To Cart</button>
+        </div>
+      </section>
+    </main>
+
+    <aside id="cart" class="cart">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <div class="cart-header-right">
+          <div class="cart-total" id="cart-total">£0</div>
+          <button class="btn cart-toggle" id="cart-toggle" type="button" aria-expanded="true">Hide</button>
+        </div>
+      </div>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-actions">
+        <button class="btn danger" id="clear-cart">Clear Cart</button>
+        <button class="btn checkout" id="checkout">Checkout via WhatsApp</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

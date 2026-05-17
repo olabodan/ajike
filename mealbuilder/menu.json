@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "restaurant": "Ajike Kitchen",
+    "locale": "en-GB",
+    "currency": "GBP",
+    "currency_symbol": "£",
+    "whatsapp_number": "2349090080006"
+  },
+ 
+  "categories": [
+    { "id": "rice", "name": "Rice Dishes" },
+    { "id": "swallow", "name": "Swallow Meals" },
+    { "id": "party", "name": "Party Trays" }
+  ],
+
+  "items": [
+    {
+      "id": "jollof_rice",
+      "name": "Jollof Rice",
+      "category": "rice",
+      "price": 2500,
+
+      "availability": { "available": true, "stock": 20 },
+
+      "promo": { "discount": 10, "tag": "best_seller" },
+
+      "bulk": {
+        "allowed": true,
+        "bulk_discounts": [
+          { "qty": 10, "discount": 5 },
+          { "qty": 20, "discount": 10 }
+        ]
+      },
+
+      "image": {
+        "url": "https://cdn.ajikekitchen.com/menu/jollof.webp",
+        "width": 800,
+        "height": 600
+      },
+
+      "sizes": ["small", "medium", "large"],
+
+      "modifier_groups": ["protein", "sides"]
+    },
+
+    {
+      "id": "eba",
+      "name": "Eba",
+      "category": "swallow",
+      "price": 2000,
+
+      "availability": { "available": true, "stock": 15 },
+
+      "promo": { "discount": 0, "tag": "popular" },
+
+      "image": {
+        "url": "https://cdn.ajikekitchen.com/menu/eba.webp",
+        "width": 800,
+        "height": 600
+      },
+
+      "sizes": ["medium", "large"],
+
+      "modifier_groups": ["soup", "meat"]
+    },
+
+    {
+      "id": "jollof_party",
+      "name": "Jollof Party Tray",
+      "category": "party",
+      "price": 25000,
+
+      "serves": 10,
+
+      "availability": { "available": true },
+
+      "image": {
+        "url": "https://cdn.ajikekitchen.com/menu/jollof-party.webp",
+        "width": 800,
+        "height": 600
+      },
+
+      "modifier_groups": ["protein"]
+    }
+  ],
+
+  "modifier_groups": [
+    {
+      "id": "protein",
+      "name": "Choose Protein",
+      "required": true,
+      "options": ["chicken", "beef", "fish", "turkey"]
+    },
+
+    {
+      "id": "sides",
+      "name": "Add Sides",
+      "required": false,
+      "options": ["plantain", "salad", "coleslaw"]
+    },
+
+    {
+      "id": "soup",
+      "name": "Choose Soup",
+      "required": true,
+      "options": ["egusi", "ogbono", "ewedu"]
+    },
+
+    {
+      "id": "meat",
+      "name": "Choose Meat",
+      "required": false,
+      "options": ["beef", "goat_meat", "fish"]
+    }
+  ],
+
+  "modifiers": [
+    {
+      "id": "chicken",
+      "name": "Grilled Chicken",
+      "price": 1500,
+      "availability": { "available": true, "stock": 10 },
+      "image": {
+        "url": "https://cdn.ajikekitchen.com/menu/chicken.webp",
+        "width": 600,
+        "height": 600
+      }
+    },
+
+    {
+      "id": "plantain",
+      "name": "Fried Plantain",
+      "price": 600,
+      "availability": { "available": true, "stock": 20 },
+      "image": {
+        "url": "https://cdn.ajikekitchen.com/menu/plantain.webp",
+        "width": 600,
+        "height": 600
+      }
+    },
+
+    {
+      "id": "coleslaw",
+      "name": "Coleslaw",
+      "price": 700,
+      "availability": { "available": true, "stock": 8 },
+      "image": {
+        "url": "https://cdn.ajikekitchen.com/menu/coleslaw.webp",
+        "width": 600,
+        "height": 600
+      }
+    },
+
+    {
+      "id": "egusi",
+      "name": "Egusi Soup",
+      "price": 1500,
+      "availability": { "available": true },
+      "image": {
+        "url": "https://cdn.ajikekitchen.com/menu/egusi.webp",
+        "width": 600,
+        "height": 600
+      }
+    }
+  ]
+}
